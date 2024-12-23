@@ -51,10 +51,10 @@ const Profile = () => {
   const handleLogout = async () => {
     const result = await logout();
     if (result) {
-      Alert.alert("Success", "Logged out successfully");
+      Alert.alert("Success", "You have been logged out successfully");
       refetch();
     } else {
-      Alert.alert("Error", "Failed to logout");
+      Alert.alert("Error", "An error occurred while logging out");
     }
   };
 
@@ -75,7 +75,7 @@ const Profile = () => {
               source={{ uri: user?.avatar }}
               className="size-44 relative rounded-full"
             />
-            <TouchableOpacity className="absolute bottom-11 right-2">
+            <TouchableOpacity className="absolute bottom-10 right-0">
               <Image source={icons.edit} className="size-9" />
             </TouchableOpacity>
 
